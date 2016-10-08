@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+iosLaunchConfigurationAttributes/ATTR_MINIFY=true
+iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=umark_ios
+iosLaunchConfigurationAttributes/ATTR_UPLOAD_DEBUG_SYMBOLS=false
+iosLaunchConfigurationAttributes/appid=ru.umark.official
+iosLaunchConfigurationAttributes/certificate=Alexey Kondakov (EK7C3F9UCY)
+iosLaunchConfigurationAttributes/keychain=
+iosLaunchConfigurationAttributes/sdk_version=10.0
+iosLaunchConfigurationAttributes/uuid=608e70e9-5cf8-4c9e-9d2a-f82e79bbbd6d
