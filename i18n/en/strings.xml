@@ -9,7 +9,6 @@
 	<string name="AccruedPercents">Начисленные % *</string>
 	<string name="Accumulations">Накопления</string>
 	<string name="AccumulationTable">Таблица накоплений *</string>
-	<string name="AccumulationTable*">* Расчетное значение, проценты по вкладу зачисляются согласно договору и в случае выполнения условий договора</string>
 	<string name="Address">Адрес</string>
 	<string name="Addresses">Адреса</string>
 	<string name="AddressesEmpty">Список адресов пуст</string>
@@ -222,7 +221,7 @@
 	<string name="Operation">Операция</string>
 	<string name="OperationKind">Вид операции</string>
 	<string name="OrderNumber">Номер платежного поручения</string>
-	<string name="Over 5km">Свыше 5 км</string>
+	<string name="Over_5km">Свыше 5 км</string>
 	<string name="OverduePayment">Просроченный платеж</string>
 	<string name="OverPeriod">За период</string>
 	<string name="Own">Собственные</string>
@@ -313,7 +312,7 @@
 	<string name="TryOneMoreTime">Попробовать еще раз</string>
 	<!-- #U -->
 	<string name="Undefinedkm">Неизвестно</string>
-	<string name="Under km">До %s км</string>
+	<string name="Under_km">До %s км</string>
 	<string name="UseTouchID">Использовать Touch ID для входа?</string>
 	<!-- #V -->
 	<!-- #W -->

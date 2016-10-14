@@ -16,7 +16,11 @@ var clicked;
 //---------------------------------------------//
 
 function onInitController(window, params) {
-	t2 = require("TiTools2/TiTools");
+	if(Ti.Platform.osname == "iphone"){
+		var t2 = require("TiTools2/TiTools");
+	} else {
+		var t2 = require("TiTools2_a/TiTools");
+	}
 	cmp = t2.Component;
 	win = window;
 	request = t2.TxRx;
@@ -60,6 +64,7 @@ function onWindowOpen(window, event) {
 					var elemForm;
 					
 					if (category.parrent_id == t2.Global.get("mainCatalogID")){
+						t2.Utils.info('load brands');
 						elemForm = t2.Form.load(undefined, "templates/list/brand.form.js", {title: category.name, img: t2.Path.imgUrl(category.img), right: 0});
 					} else {
 						elemForm = t2.Form.load(undefined, "templates/list/category.form.js", {title: category.name, img: t2.Path.imgUrl(category.img), right: 0});

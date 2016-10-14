@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Theme.AppCompat.Fullscreen">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowActionBar">false</item>
+		<!-- AppCompat Compatibility -->
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+	
+	<style name="Theme.Titanium" parent="@style/Theme.AppCompat.Fullscreen">
+		<item name="android:windowBackground">@drawable/background</item>
+		<item name="android:windowActionBar">false</item>		
+		<item name="android:windowNoTitle">true</item>
+		<!-- AppCompat Compatibility -->
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+
+	<style name="Theme.AppCompat.Translucent">
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:colorBackgroundCacheHint">@null</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:actionBarStyle">@style/Base.Widget.AppCompat.ActionBar.Solid</item>
+		<!-- AppCompat Compatibility -->
+		<item name="actionBarStyle">@style/Base.Widget.AppCompat.ActionBar.Solid</item>
+	</style>
+	
+	<style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+		<item name="android:colorPrimary">#901c1c</item>
+		<item name="colorAccent">#901c1c</item>
+	</style>
+
+	<style name="Theme.AppCompat.Translucent.NoTitleBar" parent="@style/Theme.AppCompat.Light">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowActionBar">false</item>
+		
+		<item name="colorAccent">#901c1c</item>
+    	<item name="colorControlNormal">#b1afab</item>
+		<item name="alertDialogTheme">@style/AlertDialogStyle</item>
+		<!-- AppCompat Compatibility -->
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+		
+	</style>
+	
+	
+	<style name="Theme.AppCompat.Translucent.NoTitleBar.Fullscreen">
+		<item name="android:windowFullscreen">true</item>
+	</style>
+	
+	<style name="Theme.AppCompat.Light.NoActionBar" parent="@style/Theme.AppCompat.Light">
+		<item name="android:windowNoTitle">true</item>
+	    <item name="windowActionBar">false</item> <!-- For 2.x version  -->
+	</style>
+</resources>

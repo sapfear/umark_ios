@@ -11,7 +11,11 @@ var clicked;
 //---------------------------------------------//
 
 function onInitController(window, params) {
-	t2 = require("TiTools2/TiTools");
+	if(Ti.Platform.osname == "iphone"){
+		var t2 = require("TiTools2/TiTools");
+	} else {
+		var t2 = require("TiTools2_a/TiTools");
+	}
 	win_main = window;
 	
 	clicked = false;

@@ -1,5 +1,9 @@
-var t2 = require("TiTools2/TiTools"),
-	bank = t2.Bank;
+var bank = t2.Bank;
+if(Ti.Platform.osname == "iphone"){
+	var t2 = require("TiTools2/TiTools");
+} else {
+	var t2 = require("TiTools2_a/TiTools");
+}
 
 function createSearchBar(cancel) {
 	var search = t2.UI.createSearchBar(undefined, {

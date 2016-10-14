@@ -1,5 +1,4 @@
-var t2 = require("TiTools2/TiTools"),
-	cmp = t2.Component,
+var cmp = t2.Component,
 	_ = t2.ThirdParty.underscore,
 	_str = t2.ThirdParty.underscoreString,
 	moment = t2.ThirdParty.moment,
@@ -7,6 +6,11 @@ var t2 = require("TiTools2/TiTools"),
 	indicator.init();
 var authQuery = [];
 
+if(Ti.Platform.osname == "iphone"){
+	var t2 = require("TiTools2/TiTools");
+} else {
+	var t2 = require("TiTools2_a/TiTools");
+}
 //---------------------------------------------//
 
 function request(type, customCode, args, successCallback, failureCallback, settings, hookUrl) {

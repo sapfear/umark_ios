@@ -12,7 +12,11 @@ var clicked,
 //---------------------------------------------//
 
 function onInitController(window, params) {
-	t2 = require("TiTools2/TiTools");
+	if(Ti.Platform.osname == "iphone"){
+		var t2 = require("TiTools2/TiTools");
+	} else {
+		var t2 = require("TiTools2_a/TiTools");
+	}
 	cmp = t2.Component;
 	win_main = window;
 	
@@ -116,7 +120,11 @@ function showCatalogWin(event) {
 		
 		//cmp.setBackBtn(catalogWin, "Марка");
 		
-		t2.UI.currentTab.open(catalogWin);
+		if(t2.isIOS){
+			t2.UI.currentTab.open(catalogWin);
+		} else {
+			catalogWin.open();
+		}
 		setTimeout(function() {
 			clicked = false;
 		}, 1000);
@@ -145,7 +153,11 @@ function showCurrentStoreWin(event) {
 		
 		//cmp.setBackBtn(catalogWin, "Марка");
 		
-		t2.UI.currentTab.open(catalogWin);
+		if(t2.isIOS){
+			t2.UI.currentTab.open(catalogWin);
+		} else {
+			catalogWin.open();
+		}
 		setTimeout(function() {
 			clicked = false;
 		}, 1000);
@@ -173,7 +185,11 @@ function showStoresWin(event) {
 		
 		//cmp.setBackBtn(storesWin, "Марка");
 		
-		t2.UI.currentTab.open(storesWin);
+		if(t2.isIOS){
+			t2.UI.currentTab.open(storesWin);
+		} else {
+			storesWin.open();
+		}
 		setTimeout(function() {
 			clicked = false;
 		}, 1000);

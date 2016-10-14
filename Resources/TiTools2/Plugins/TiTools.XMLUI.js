@@ -71,6 +71,7 @@ function formCacheLoad(data, format) {
 			}
 		}
 	}
+	t2.Utils.info(result);
 	return result;
 }
 

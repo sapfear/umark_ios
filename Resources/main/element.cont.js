@@ -14,7 +14,11 @@ var clicked;
 //---------------------------------------------//
 
 function onInitController(window, params) {
-	t2 = require("TiTools2/TiTools");
+	if(Ti.Platform.osname == "iphone"){
+		var t2 = require("TiTools2/TiTools");
+	} else {
+		var t2 = require("TiTools2_a/TiTools");
+	}
 	win_main = window;
 	request = t2.TxRx;
 	
@@ -41,7 +45,7 @@ function onWindowOpen(window, event) {
 		text = text.replace(new RegExp('&nbsp;', 'g'), ' ');
 		text = text.replace(new RegExp('&ndash;', 'g'), '-');
 		text = text.replace(new RegExp('&quot;', 'g'), '"');
-		text = text.replace(new RegExp('&deg;', 'g'), '°');
+		//text = text.replace(new RegExp('&deg;', 'g'), '°');
 		text = text.replace(new RegExp('</tr><tr>', 'g'), "\n");
 
 		return text.replace(/<\/?[^>]+>/gi, '');
