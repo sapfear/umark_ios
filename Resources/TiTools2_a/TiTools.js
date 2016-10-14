@@ -10,13 +10,13 @@ var thirdPartyMoment = require("TiTools2_a/ThirdParty/moment");
 //var tracker = GA.getTracker("UA-76843045-1");
 
 function analyticsTrackEvent(params){
-	tracker.trackEvent(params);
+	//tracker.trackEvent(params);
 }
 function analyticsTrackScreen(name){
-	tracker.trackScreen(name);
+	//tracker.trackScreen(name);
 }
 function analyticsTrackTiming(params){
-	tracker.trackTiming(params);
+	//tracker.trackTiming(params);
 }
 
 //---------------------------------------------//

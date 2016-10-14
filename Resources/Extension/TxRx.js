@@ -1,3 +1,9 @@
+if(Ti.Platform.osname == "iphone"){
+	var t2 = require("TiTools2/TiTools");
+} else {
+	var t2 = require("TiTools2_a/TiTools");
+}
+
 var cmp = t2.Component,
 	_ = t2.ThirdParty.underscore,
 	_str = t2.ThirdParty.underscoreString,
@@ -5,12 +11,6 @@ var cmp = t2.Component,
 	indicator = t2.Loading;
 	indicator.init();
 var authQuery = [];
-
-if(Ti.Platform.osname == "iphone"){
-	var t2 = require("TiTools2/TiTools");
-} else {
-	var t2 = require("TiTools2_a/TiTools");
-}
 //---------------------------------------------//
 
 function request(type, customCode, args, successCallback, failureCallback, settings, hookUrl) {

@@ -13,12 +13,14 @@ var clicked,
 
 function onInitController(window, params) {
 	if(Ti.Platform.osname == "iphone"){
-		var t2 = require("TiTools2/TiTools");
+		t2 = require("TiTools2/TiTools");
 	} else {
-		var t2 = require("TiTools2_a/TiTools");
+		t2 = require("TiTools2_a/TiTools");
 	}
 	cmp = t2.Component;
-	win_main = window;
+	if(Ti.Platform.osname == "iphone"){
+		win_main = window;
+	}
 	
 	clicked = false;
 	offline = false;
@@ -27,13 +29,17 @@ function onInitController(window, params) {
 	}
 }
 
+function onFormPreLoad(parent) {
+	if(Ti.Platform.osname != "iphone"){
+		win_main = parent;
+	}
+}
 //---------------------------------------------//
 
 function onWindowOpen(window, event) {
 	
-	
 	var imageLogo = Ti.UI.createImageView({
-		image: Ti.Filesystem.resourcesDirectory + '/DefaultIcon-ios.png',
+		image: Ti.Filesystem.resourcesDirectory + (t2.isIOS) ? '' : '/iphone' + '/DefaultIcon-ios.png',
 		top: '10dp',
 		width: '40%'
 	});
@@ -201,5 +207,6 @@ function showStoresWin(event) {
 module.exports = {
 	onInitController: onInitController,
 	onWindowOpen: onWindowOpen,
-	onWindowClose: onWindowClose
+	onWindowClose: onWindowClose,
+	onFormPreLoad: onFormPreLoad
 };

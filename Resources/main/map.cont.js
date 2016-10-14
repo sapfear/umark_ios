@@ -1,6 +1,5 @@
 function init(win, data) {
-	var bank = t2.Bank,
-		_ = t2.ThirdParty.underscore,
+	var _ = t2.ThirdParty.underscore,
 		_str = t2.ThirdParty.underscoreString,
 		Map = require('ti.map');
 	

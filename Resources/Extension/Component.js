@@ -1,4 +1,3 @@
-var bank = t2.Bank;
 if(Ti.Platform.osname == "iphone"){
 	var t2 = require("TiTools2/TiTools");
 } else {
