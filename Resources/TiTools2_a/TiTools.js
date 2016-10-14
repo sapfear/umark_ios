@@ -4,10 +4,10 @@ var thirdPartyMoment = require("TiTools2_a/ThirdParty/moment");
 
 //---------------------------------------------//
 
-var GA = require("analytics.google");
-	GA.dispatchInterval = 1;
+//var GA = require("analytics.google");
+	//GA.dispatchInterval = 1;
 	
-var tracker = GA.getTracker("UA-76843045-1");
+//var tracker = GA.getTracker("UA-76843045-1");
 
 function analyticsTrackEvent(params){
 	tracker.trackEvent(params);
