@@ -39,9 +39,9 @@ function onFormPreLoad(parent) {
 function onWindowOpen(window, event) {
 	
 	var imageLogo = Ti.UI.createImageView({
-		image: Ti.Filesystem.resourcesDirectory + (t2.isIOS) ? '' : '/iphone' + '/DefaultIcon-ios.png',
-		top: '10dp',
-		width: '40%'
+		image: (t2.isIOS) ? '/DefaultIcon-ios.png' : Ti.Filesystem.resourcesDirectory + '/iphone/DefaultIcon-ios.png',
+		top: '5%',
+		height: '22%'
 	});
 	win_main.add(imageLogo);
 	
@@ -56,9 +56,9 @@ function onWindowOpen(window, event) {
 		font:{fontSize:20,fontFamily:'Helvetica Neue', fontWeight: 'bold'},
 		backgroundColor: '#0c8ccd',
 		textAlign:'center',
-		width:'200dp',
-		height: '50dp',
-		top: '140dp'
+		width:'65%',
+		height: '10%',
+		top: '32%'
 	});
 	
 	catalog_label.addEventListener("click", showCatalogWin);
@@ -70,9 +70,9 @@ function onWindowOpen(window, event) {
 		font:{fontSize:20,fontFamily:'Helvetica Neue', fontWeight: 'bold'},
 		backgroundColor: '#0c8ccd',
 		textAlign:'center',
-		width:'200dp',
-		height: '50dp',
-		top: '230dp'
+		width:'65%',
+		height: '10%',
+		top: '50%'
 	});
 	stores_label.addEventListener("click", showStoresWin);
 	
@@ -83,9 +83,9 @@ function onWindowOpen(window, event) {
 		font:{fontSize:20,fontFamily:'Helvetica Neue', fontWeight: 'bold'},
 		backgroundColor: '#0c8ccd',
 		textAlign:'center',
-		width:'200dp',
-		height: '50dp',
-		top: '320dp'
+		width:'65%',
+		height: '10%',
+		top: '68%'
 	});
 	instore_label.addEventListener("click", showCurrentStoreWin);
 	

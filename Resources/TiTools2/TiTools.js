@@ -2351,7 +2351,6 @@ function formLoad(parent, data, params, controller) {
 		result = controller;
 	}
 	var content = formCacheLoad(data, params);
-	t2.Utils.info(content);
 	if (content != undefined) {
 		var links = [];
 		formLoadJS(content, params, result, links, parent, formLoadAppendCallback(parent));
@@ -2513,8 +2512,6 @@ function formLoadItemJS(content, params, controller, links, parent, callback) {
 		finalStyle = presetMerge(preset, finalStyle);
 	}
 	finalStyle = formBindStyle(finalStyle, finalParams);
-	t2.Utils.info(content);
-	t2.Utils.info(content.class);
 	switch(content.class) {
 		case "TabGroup":
 			control = formControlTabGroup(content, finalStyle, finalParams, controller, links, parent, callback);

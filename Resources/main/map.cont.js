@@ -3,12 +3,6 @@ function init(win, data) {
 		_str = t2.ThirdParty.underscoreString,
 		Map = require('ti.map');
 	
-	if(Ti.Platform.osname == "iphone"){
-		var t2 = require("TiTools2/TiTools");
-	} else {
-		var t2 = require("TiTools2_a/TiTools");
-	}
-	
 	var map = Map.createView(undefined, {
 		mapType: Map.STANDARD_TYPE,
 		animate: true,
